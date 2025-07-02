@@ -1,0 +1,55 @@
+{
+    "rulesets": [
+        {
+            "name": "Invoice Processing",
+            "global_predicate": "Any",
+            "rules": [
+                {
+                    "field": "subject",
+                    "predicate": "contains",
+                    "value": "invoice"
+                },
+                {
+                    "field": "from",
+                    "predicate": "equals",
+                    "value": "billing@example.com"
+                }
+            ],
+            "actions": ["move_to_label:Invoices", "mark_as_read"]
+        },
+        {
+            "name": "Newsletter Management",
+            "global_predicate": "All",
+            "rules": [
+                {
+                    "field": "subject",
+                    "predicate": "contains",
+                    "value": "newsletter"
+                },
+                {
+                    "field": "received_date",
+                    "predicate": "greater_than_days",
+                    "value": "7"
+                }
+            ],
+            "actions": ["mark_as_read"]
+        },
+        {
+            "name": "Self Message",
+            "global_predicate": "All",
+            "rules": [
+                {
+                    "field": "from",
+                    "predicate": "contains",
+                    "value": "prasath"
+                },
+                {
+                    "field": "subject",
+                    "predicate": "contains",
+                    "value": "Test"
+                }
+            ],
+            "actions": ["move_to_label:Equity", "mark_as_read"]
+        }
+    ]
+}
