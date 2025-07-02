@@ -45,7 +45,7 @@ python action_taker.py
 
 The system uses SQLite with three tables:
 - emails: Stores email metadata
-- checkpoint: Tracks last fetched timestamp of last email
+- checkpoint: Tracks the timestamp when emails are last fetched.
 - action_queue: Manages pending actions
 
 ## Rules Format
@@ -69,7 +69,7 @@ Example rules.json:
                     "value": "billing@example.com"
                 }
             ],
-            "action": "move_to_label:Invoices"
+            "actions": ["move_to_label:Invoices"]
         }
     ]
 }
