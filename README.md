@@ -45,7 +45,7 @@ python action_taker.py
 
 The system uses SQLite with three tables:
 - emails: Stores email metadata
-- checkpoint: Tracks last fetched timestamp
+- checkpoint: Tracks last fetched timestamp of last email
 - action_queue: Manages pending actions
 
 ## Rules Format
