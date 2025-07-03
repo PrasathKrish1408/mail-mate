@@ -4,7 +4,7 @@ from googleapiclient.discovery import build
 from database import Database
 from auth_manager import AuthManager
 
-SCOPES = ['https://www.googleapis.com/auth/gmail.modify']
+SCOPES = ['https://www.googleapis.com/auth/gmail.readonly','https://www.googleapis.com/auth/gmail.modify']
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
